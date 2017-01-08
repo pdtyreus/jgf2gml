@@ -1,9 +1,34 @@
 var Mustache = require('mustache');
 var fs = require('fs');
 
+var template = `graph [
+        comment "{{comment}}"
+        directed {{directed}}
+        {{#id}}id {{this}}{{/id}}
+        label "{{label}}"
+        {{#nodes}}
+        node [
+                id {{id}}
+                label "{{label}}"
+                {{#attributes}}
+                {{key}} "{{value}}"
+                {{/attributes}}
+        ]
+        {{/nodes}}
+        {{#edges}}
+        edge [
+                source {{source}}
+                target {{target}}
+                label "{{label}}"
+                {{#attributes}}
+                {{key}} "{{value}}"
+                {{/attributes}}
+        ]
+        {{/edges}}
+]`;
+
 module.exports = function toGml(jgf, options) {
     var opt = options || {};
-    var template = fs.readFileSync("gml.mustache", "UTF-8");
 
     var graph = jgf.graph;
 

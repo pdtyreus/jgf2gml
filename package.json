@@ -16,6 +16,10 @@
     "graph"
   ],
   "author": "Daniel Tyreus <tyreus@synclab.com> (http://www.synclab.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pdtyreus/jgf2gml.git"
+  },
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",
