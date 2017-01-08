@@ -1,0 +1,25 @@
+graph [
+        comment "{{comment}}"
+        directed {{directed}}
+        {{#id}}id {{this}}{{/id}}
+        label "{{label}}"
+        {{#nodes}}
+        node [
+                id {{id}}
+                label "{{label}}"
+                {{#attributes}}
+                {{key}} "{{value}}"
+                {{/attributes}}
+        ]
+        {{/nodes}}
+        {{#edges}}
+        edge [
+                source {{source}}
+                target {{target}}
+                label "{{label}}"
+                {{#attributes}}
+                {{key}} "{{value}}"
+                {{/attributes}}
+        ]
+        {{/edges}}
+]

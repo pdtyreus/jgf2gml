@@ -1,0 +1,24 @@
+{
+  "name": "jgf2gml",
+  "version": "1.0.0",
+  "description": "Utility to convert JSON Graph Format to Graph Markup Language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "jgf2gml": "./bin/jgf2gml"
+  },
+  "keywords": [
+    "jgf",
+    "gml",
+    "json",
+    "graph"
+  ],
+  "author": "Daniel Tyreus <tyreus@synclab.com> (http://www.synclab.com)",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "mustache": "^2.3.0"
+  }
+}
