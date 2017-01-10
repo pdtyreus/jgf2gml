@@ -1,6 +1,6 @@
 {
   "name": "jgf2gml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility to convert JSON Graph Format to Graph Markup Language",
   "main": "index.js",
   "scripts": {

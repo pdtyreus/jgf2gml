@@ -20,11 +20,16 @@ if (!json) {
    process.exit(1);
 }
 
+var options = {};
+if (program.appendId) {
+   options.appendIdToLabel = true;
+}
+
 var output = program.outFile;
 
 var jgf = fs.readFileSync(json,"UTF-8");
 
-var gml = jgf2gml(JSON.parse(jgf));
+var gml = jgf2gml(JSON.parse(jgf), options);
 
 if (output) {
     fs.writeFileSync(output,gml);
